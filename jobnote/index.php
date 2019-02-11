@@ -44,7 +44,8 @@
                                 <label>Keterangan</label>
                                 <input type="text" class="form-control" placeholder="Keterangan tugas" v-model="inputDataTugas.ket"/>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button v-if="enable" type="button" class="btn btn-primary" @click="simpanTugas(inputDataTugas)">Simpan</button> &nbsp
+                            <button v-else="enable" type="button" class="btn btn-success" @click="updateTugas(inputDataTugas)">Update</button>
                         </form>
                     </table>
                 </div>
