@@ -1,57 +1,45 @@
 new Vue({
-  el: '#belajar',
+  el: '#coba',
   data: function() {
     return {
-      dataBarang: [],
-      inputDataBarang: {},
+      dataTugas: [],
+      inputDataTugas: {},
       enable: false
     }
   },
   methods: {
-    generateUUID: function() {
-      var d = new Date().getTime();
-      if (window.performance && typeof window.performance.now === "function") {
-        d += performance.now();
-      }
-      var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = (d + Math.random() * 16) % 16 | 0;
-        d = Math.floor(d / 16);
-        return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-      });
-      return uuid;
-    },
-    tambahBarang: function() {
+    tambahTugas: function() {
       this.enable = true;
-      this.inputDataBarang = {};
+      this.inputDataTugas = {};
     },
-    simpanBarang: function(barang) {
-      this.dataBarang.push({
-        'idBarang': this.generateUUID(),
-        'namaBarang': barang.namaBarang,
-        'jenisBarang': barang.jenisBarang,
-        'tanggalKadaluarsa': barang.tanggalKadaluarsa
+    simpanTugas: function(tgs) {
+      this.dataTugas.push({
+        'namaMatakuliah': tgs.namaMatakuliah,
+        'tugas': tgs.tugas,
+        'batasTugas': tgs.batasTugas,
+        'ket': tgs.ket
       });
     },
-    editBarang: function(barang) {
+    editTugas: function(tgs) {
       this.enable = false;
-      this.index = this.dataBarang.indexOf(barang);
-      this.inputDataBarang.idBarang = barang.idBarang;
-      this.inputDataBarang.namaBarang = barang.namaBarang;
-      this.inputDataBarang.jenisBarang = barang.jenisBarang;
-      this.inputDataBarang.tanggalKadaluarsa = barang.tanggalKadaluarsa;
+      this.index = this.dataTugas.indexOf(tgs);
+      this.inputDataTugas.namaMatakuliah = tgs.namaMatakuliah;
+      this.inputDataTugas.tugas = tgs.tugas;
+      this.inputDataTugas.batasTugas = tgs.batasTugas;
+      this.inputDataTugas.ket = tgs.ket;
     },
-    updateBarang: function(barang) {
-      this.dataBarang[this.index].idBarang = barang.idBarang;
-      this.dataBarang[this.index].namaBarang = barang.namaBarang;
-      this.dataBarang[this.index].jenisBarang = barang.jenisBarang;
-      this.dataBarang[this.index].tanggalKadaluarsa = barang.tanggalKadaluarsa;
-      this.inputDataBarang = {};
+    updateTugas: function(tgs) {
+      this.dataTugas[this.index].namaMatakuliah = tgs.namaMatakuliah;
+      this.dataTugas[this.index].tugas = tgs.tugas;
+      this.dataTugas[this.index].batasTugas = tgs.batasTugas;
+      this.dataTugas[this.index].ket = tgs.ket;
+      this.inputDataTugas = {};
     },
-    hapusBarang: function(barang) {
-      var result = confirm('Anda ingin menghapus data barang ?');
+    hapusTugas: function(tgs) {
+      var result = confirm('Anda yakin menghapus tugas ini???');
       if (result) {
-        this.index = this.dataBarang.indexOf(barang);
-        this.dataBarang.splice(this.index, 1);
+        this.index = this.dataTugas.indexOf(tgs);
+        this.dataTugas.splice(this.index, 1);
       }
     }
   }
