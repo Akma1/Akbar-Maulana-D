@@ -7,7 +7,7 @@
     <script type="text/javascript" src="http://localhost/jobnote/js/dist/vue.min.js"></script>
     <script type="text/javascript" src="http://localhost/jobnote/js/appnote.js"></script>
 </head>
-<body>
+<body id="coba">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
