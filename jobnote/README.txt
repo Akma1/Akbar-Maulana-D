@@ -9,3 +9,7 @@ Spesifikasi :
 Installation :
 -install vue js : https://vuejs.org/v2/guide/installation.html
 -download bootstrap : https://getbootstrap.com/
+
+page :
+index.php -> form input
+data.php -> form data
