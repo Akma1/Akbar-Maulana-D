@@ -40,10 +40,10 @@
 						</thead>
 						<tbody>
 							<tr v-for="dataTugas">
-								<td>{{  }}</td>
-								<td>{{  }}</td>
-								<td>{{  }}</td>
-								<td>{{  }}</td>
+								<td>{{ namaMatakuliah }}</td>
+								<td>{{ tugas }}</td>
+								<td>{{ batasTugas }}</td>
+								<td>{{ ket }}</td>
 								<td class="text-center">
 									<button type="button" class="btn btn-success" data-toggle="modal" data-target="index.php" @click="editBarang(b)">
                                         <i>Edit</i>
