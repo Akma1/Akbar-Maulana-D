@@ -13,3 +13,7 @@ Installation :
 page :
 index.php -> form input
 data.php -> form data
+
+note :
+paham sedikit library dan belum paham alur memunculkan data pada vue :)
+sudah mengikuti alur install, tetapi data tidak mau muncul.
