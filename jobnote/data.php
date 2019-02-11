@@ -39,16 +39,16 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr v-for="dataTugas">
-								<td>{{ namaMatakuliah }}</td>
-								<td>{{ tugas }}</td>
-								<td>{{ batasTugas }}</td>
-								<td>{{ ket }}</td>
+							<tr v-for="x in dataTugas">
+								<td>{{ x.namaMatakuliah }}</td>
+								<td>{{ x.tugas }}</td>
+								<td>{{ x.batasTugas }}</td>
+								<td>{{ x.ket }}</td>
 								<td class="text-center">
-									<button type="button" class="btn btn-success" data-toggle="modal" data-target="index.php" @click="editBarang(b)">
+									<button type="button" class="btn btn-success" data-toggle="modal" data-target="index.php" @click="editTugas(x)">
                                         <i>Edit</i>
                                     </button>
-                                    <button type="button" class="btn btn-danger" @click="hapusBarang(b)">
+                                    <button type="button" class="btn btn-danger" @click="hapusTugas(x)">
                                         <i>Delete</i>
                                     </button>
 								</td>
