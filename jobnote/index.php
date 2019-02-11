@@ -29,20 +29,20 @@
                     <table class="table table-striped">
                         <form>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Matakuliah</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Matakuliah">
+                                <label>Matakuliah</label>
+                                <input type="text" class="form-control" placeholder="Nama Matakuliah" v-model="inputDataTugas.namaMatakuliah"/>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Tugas</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Rincian Tugas">
+                                <label>Tugas</label>
+                                <input type="text" class="form-control" placeholder="Rincian Tugas" v-model="inputDataTugas.tugas"/>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Batas tugas</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Batas pengumpulan tugas">
+                                <label>Batas tugas</label>
+                                <input type="text" class="form-control" placeholder="Batas pengumpulan tugas" v-model="inputDataTugas.batasTugas"/>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Keterangan</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Keterangan tugas">
+                                <label>Keterangan</label>
+                                <input type="text" class="form-control" placeholder="Keterangan tugas" v-model="inputDataTugas.ket"/>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
